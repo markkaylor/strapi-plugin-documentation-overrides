@@ -78,7 +78,7 @@ const docPlugin = {
         };
 
         // Build the default fullDoc values
-        for (fixedField of FIXED_FIELDS) {
+        for (const fixedField of FIXED_FIELDS) {
           setDefaultsOnFullDoc(fixedField)
         }
         setDefaultsOnFullDoc("x-strapi-config");
