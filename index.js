@@ -18,7 +18,6 @@ const mockSchemaUniqueNames = [
   "AddressListResponse",
 ];
 
-// NOTE:
 // The openapi field is omitted, it should not be touched
 // The components and paths fields are omitted, they are handled elsewhere
 const FIXED_FIELDS = ["info", "servers", "security", "tags", "externalDocs"];
