@@ -99,7 +99,12 @@ const docPlugin = {
       getAllOverrides() {
         return this._allOverrides;
       },
-      register(override) {
+      // Option 1 
+      add(override) {
+        _.merge(this._allOverrides, override);
+      },
+      // Option 2
+      set(override) {
         _.merge(this._allOverrides, override);
       },
     },
@@ -109,7 +114,7 @@ const docPlugin = {
 // User code
 const userCode = {
   register(strapi) {
-    strapi.plugins.documentation.services.override.register({
+    strapi.plugins.documentation.services.override.add({
       paths: {
         "/restaurants": {
           get: {
